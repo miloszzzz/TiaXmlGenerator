@@ -2,9 +2,46 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net4.6.2</TargetFramework>
+	<LangVersion>preview</LangVersion>
+	<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+	<GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>library</OutputType>
+		<TargetFramework>net4.6.2</TargetFramework>
+		<LangVersion>preview</LangVersion>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+	</PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Siemens.Collaboration.Net.TiaPortal.Packages.Openness" Version="16.0.1685432614" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
