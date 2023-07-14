@@ -31,23 +31,35 @@ namespace TiaXmlGenerator.Models
             switch (_templateType)
             {
                 case EnumTemplates.Comment:
-                    _contant = File.ReadAllText("EmptySubnetComment.xml");
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/EmptySubnetComment.xml");
                     break;
 
                 case EnumTemplates.Header:
-                    _contant = File.ReadAllText("FC_ActuatorsHeader.xml");
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsHeader.xml");
                     break;
 
                 case EnumTemplates.Footer:
-                    _contant = File.ReadAllText("FC_ActuatorsFooter.xml");
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsFooter.xml");
                     break;
 
                 case EnumTemplates.Movement:
-                    _contant = File.ReadAllText("FC_ActuatorsMovement.xml");
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsMovement.xml");
                     break;
 
                 case EnumTemplates.Safety:
-                    _contant = File.ReadAllText("FC_ActuatorsSafety.xml");
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsSafety.xml");
+                    break;
+
+                case EnumTemplates.Parameters:
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsParameters.xml");
+                    break;
+
+                case EnumTemplates.Handling:
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsHandling.xml");
+                    break;
+
+                case EnumTemplates.Outputs:
+                    _contant = File.ReadAllText(Environment.CurrentDirectory + "/data/FC_ActuatorsOutputs.xml");
                     break;
 
                 default: 
