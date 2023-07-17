@@ -44,9 +44,14 @@ internal class Program
         ///////////////////////////////////////
         ///////////////////////////////////////
 
+<<<<<<< HEAD
+=======
         
 
+>>>>>>> 228bc4a71bf5ae96ca8c69f8768300cdf639ee86
 
+        #region actuators example
+        /*
         // File to export
         string xmlFilePath = "FC_GeneratedXml.Xml";
         string xmlContant = XmlHelper.Header.Contant;

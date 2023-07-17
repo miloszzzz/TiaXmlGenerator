@@ -30,7 +30,11 @@ namespace TiaXmlGenerator.Models
         {
             switch (_templateType)
             {
+<<<<<<< HEAD
+                case EnumTemplates.ActuatorComment:
+=======
                 case EnumTemplates.Comment:
+>>>>>>> 228bc4a71bf5ae96ca8c69f8768300cdf639ee86
                     _contant = Properties.Resources.EmptySubnetComment;
                     break;
 
@@ -60,6 +64,29 @@ namespace TiaXmlGenerator.Models
 
                 case EnumTemplates.Outputs:
                     _contant = Properties.Resources.FC_ActuatorsOutputs;
+<<<<<<< HEAD
+                    break;
+
+                case EnumTemplates.TextListHeader:
+                    _contant = Properties.Resources.TextList_Header;
+                    break;
+
+                case EnumTemplates.TextListCommentMulti:
+                    _contant = Properties.Resources.TextList_HeaderCommentMulti;
+                    break;
+
+                case EnumTemplates.TextListEntry:
+                    _contant = Properties.Resources.TextList_Text;
+                    break;
+
+                case EnumTemplates.TextListEntryMulti:
+                    _contant = Properties.Resources.TextList_TextMulti;
+                    break;
+
+                case EnumTemplates.TextListFooter:
+                    _contant = Properties.Resources.TextList_Footer;
+=======
+>>>>>>> 228bc4a71bf5ae96ca8c69f8768300cdf639ee86
                     break;
 
                 default: 

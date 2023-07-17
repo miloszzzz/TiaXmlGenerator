@@ -90,7 +90,7 @@ Warning: The object contains access to global PLC constants.
 </LibraryConformanceStatus>
       <MemoryLayout>Optimized</MemoryLayout>
       <ModifiedDate ReadOnly="true">2023-07-10T07:33:46.7338948Z</ModifiedDate>
-      <Name>FC_Actuators</Name>
+      <Name>{name}</Name>
       <Number>13</Number>
       <ParameterModified ReadOnly="true">2023-07-10T07:32:43.7831792Z</ParameterModified>
       <PLCSimAdvancedSupport ReadOnly="true">true</PLCSimAdvancedSupport>
