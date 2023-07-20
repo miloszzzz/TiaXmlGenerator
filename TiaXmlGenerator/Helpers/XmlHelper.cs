@@ -152,6 +152,34 @@ namespace TiaXmlGenerator.Helpers
         }
 
 
+        public static string ProcessString(string input)
+        {
+            StringBuilder output = new StringBuilder();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                char currentChar = input[i];
+                char nextChar = i + 1 < input.Length ? input[i+1] : '\0';
+                char prevChar = i - 1 >= 0 ? input[i-1] : '\0';
+
+                if (char.IsUpper(currentChar) && i > 0 && !char.IsUpper(nextChar) && nextChar != ' ' && !char.IsUpper(prevChar) && prevChar != ' ' && prevChar != '_')
+                {
+                    output.Append(' ');
+                    output.Append(char.ToLower(currentChar));
+                }
+                else if (currentChar == '_')
+                {
+                    output.Append(" - ");
+                }
+                else
+                {
+                    output.Append(currentChar);
+                }
+            }
+
+            return output.ToString();
+        }
+
 
         /// <summary>
         /// Get description of defined program element

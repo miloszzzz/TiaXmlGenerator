@@ -26,6 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DeepL.net" Version="1.7.1" />
     <PackageReference Include="Siemens.Collaboration.Net.TiaPortal.Packages.Openness" Version="16.0.1685432614" />
   </ItemGroup>
 
