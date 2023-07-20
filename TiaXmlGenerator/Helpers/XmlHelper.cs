@@ -1,6 +1,8 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -22,6 +24,12 @@ namespace TiaXmlGenerator.Helpers
         public static Template ActuatorsOutputs = new Template(EnumTemplates.ActuatorsOutputs);
 
 
+        public static Template TextlistHeader = new Template(EnumTemplates.TextlistHeader);
+        public static Template TextlistComment = new Template(EnumTemplates.TextlistComment);
+        public static Template TextlistCommentMulti = new Template(EnumTemplates.TextlistCommentMulti);
+        public static Template tplTextlistEntry = new Template(EnumTemplates.TextlistEntry);
+        public static Template TextlistEntryMulti = new Template(EnumTemplates.TextlistEntryMulti);
+        public static Template TextlistFooter = new Template(EnumTemplates.TextlistFooter);
 
 
         public static string InsertIds(string xmlContant, ref int id)
@@ -31,17 +39,46 @@ namespace TiaXmlGenerator.Helpers
             {
                 xmlContant = Regex.Replace(xmlContant, @"\{id\}", match => _id++.ToString());
             }
-
             id = _id;
 
             return xmlContant;
         }
 
 
+        public static string InsertName(string xmlContant, string name)
+        {
+            return xmlContant.Replace("{name}", name);
+        }
+
+
+        public static string InsertNumber(string  xmlContant, int number) 
+        { 
+            return xmlContant.Replace("{number}", number.ToString());
+        }
+
+
+        public static string InsertNumber(string xmlContant, string number)
+        {
+            return xmlContant.Replace("{number}", number);
+        }
+
+
+        public static string InsertText(string xmlContant, string text)
+        {
+            return xmlContant.Replace("{text}", text);
+        }
+
+
+        public static string InsertLang(string xmlContant, string lang)
+        {
+            return xmlContant.Replace("{lang}", lang);
+        }
+
+
         public static string InsertActuator(string xmlContant, Actuator actuator, ref int id)
         {
-            xmlContant = xmlContant.Replace("{name}", actuator.Name);
-            xmlContant = xmlContant.Replace("{number}", actuator.Number.ToString());
+            xmlContant = InsertName(xmlContant, actuator.Name);
+            xmlContant = InsertNumber(xmlContant, actuator.Number);
             xmlContant = xmlContant.Replace("{constant}", actuator.Constant.ToString());
             xmlContant = xmlContant.Replace("{station}", actuator.Station.ToString());
             xmlContant = xmlContant.Replace("{station_name}", GetTypeDescription(actuator.Station));
@@ -51,6 +88,57 @@ namespace TiaXmlGenerator.Helpers
             xmlContant = xmlContant.Replace("{output_extend}", actuator.OutputExtend);
             xmlContant = InsertIds(xmlContant, ref id);
             return xmlContant;
+        }
+
+
+        public static string InsertTextlistCommentMulti(List<CultureInfo> cultures, List<string> comments) 
+        {
+            string result = "";
+            foreach (CultureInfo culture in cultures)
+            {
+                string tempContant = TextlistCommentMulti.Contant;
+                tempContant = InsertLang(tempContant, culture.Name);
+                tempContant = InsertText(tempContant, comments[cultures.IndexOf(culture)]);
+                result += tempContant;
+            }
+
+            return result;
+        }
+
+
+        public static string AddTextlistComment(List<CultureInfo> cultures, List<string> texts, ref int id)
+        {
+            string tempContant = TextlistComment.Contant;
+            tempContant = tempContant.Replace("{multilingual}", 
+                InsertTextlistCommentMulti(cultures, texts));
+            tempContant = InsertIds(tempContant, ref id);
+            return tempContant;
+        }
+
+
+        public static string InsertTextlistEntryMulti(List<CultureInfo> cultures, List<string> texts)
+        {
+            string result = "";
+            foreach (CultureInfo culture in cultures)
+            {
+                string tempContant = TextlistEntryMulti.Contant;
+                tempContant = InsertLang(tempContant, culture.Name);
+                tempContant = InsertText(tempContant, texts[cultures.IndexOf(culture)]);
+                result += tempContant;
+            }
+
+            return result;
+        }
+
+
+        public static string AddTextlistEntry(TextlistEntry entry, List<CultureInfo> cultures, ref int id)
+        {
+            string tempContant = tplTextlistEntry.Contant;
+            tempContant = InsertNumber(tempContant, entry.Number);
+            tempContant = tempContant.Replace("{multilingual}",
+                InsertTextlistEntryMulti(cultures, entry.Texts));
+            tempContant = InsertIds(tempContant, ref id);
+            return tempContant;
         }
 
 
