@@ -30,63 +30,60 @@ namespace TiaXmlGenerator.Models
         {
             switch (_templateType)
             {
-<<<<<<< HEAD
-                case EnumTemplates.ActuatorComment:
-=======
                 case EnumTemplates.Comment:
->>>>>>> 228bc4a71bf5ae96ca8c69f8768300cdf639ee86
                     _contant = Properties.Resources.EmptySubnetComment;
                     break;
 
-                case EnumTemplates.Header:
+                case EnumTemplates.ActuatorsHeader:
                     _contant = Properties.Resources.FC_ActuatorsHeader;
                     break;
 
-                case EnumTemplates.Footer:
+                case EnumTemplates.ActuatorsFooter:
                     _contant = Properties.Resources.FC_ActuatorsFooter;
                     break;
 
-                case EnumTemplates.Movement:
+                case EnumTemplates.ActuatorsMovement:
                     _contant = Properties.Resources.FC_ActuatorsMovement;
                     break;
 
-                case EnumTemplates.Safety:
+                case EnumTemplates.ActuatorsSafety:
                     _contant = Properties.Resources.FC_ActuatorsSafety;
                     break;
 
-                case EnumTemplates.Parameters:
+                case EnumTemplates.ActuatorsParameters:
                     _contant = Properties.Resources.FC_ActuatorsParameters;
                     break;
 
-                case EnumTemplates.Handling:
+                case EnumTemplates.ActuatorsHandling:
                     _contant = Properties.Resources.FC_ActuatorsHandling;
                     break;
 
-                case EnumTemplates.Outputs:
+                case EnumTemplates.ActuatorsOutputs:
                     _contant = Properties.Resources.FC_ActuatorsOutputs;
-<<<<<<< HEAD
                     break;
 
-                case EnumTemplates.TextListHeader:
-                    _contant = Properties.Resources.TextList_Header;
+                case EnumTemplates.TextlistHeader:
+                    _contant = Properties.Resources.Textlist_Header;
                     break;
 
-                case EnumTemplates.TextListCommentMulti:
-                    _contant = Properties.Resources.TextList_HeaderCommentMulti;
+                case EnumTemplates.TextlistComment:
+                    _contant = Properties.Resources.Textlist_Comment;
                     break;
 
-                case EnumTemplates.TextListEntry:
-                    _contant = Properties.Resources.TextList_Text;
+                case EnumTemplates.TextlistCommentMulti:
+                    _contant = Properties.Resources.Textlist_CommentMulitlingual;
                     break;
 
-                case EnumTemplates.TextListEntryMulti:
-                    _contant = Properties.Resources.TextList_TextMulti;
+                case EnumTemplates.TextlistEntry:
+                    _contant = Properties.Resources.Textlist_Entry;
                     break;
 
-                case EnumTemplates.TextListFooter:
-                    _contant = Properties.Resources.TextList_Footer;
-=======
->>>>>>> 228bc4a71bf5ae96ca8c69f8768300cdf639ee86
+                case EnumTemplates.TextlistEntryMulti:
+                    _contant = Properties.Resources.Textlist_EntryMultilingual;
+                    break;
+
+                case EnumTemplates.TextlistFooter:
+                    _contant = Properties.Resources.Textlist_Footer;
                     break;
 
                 default: 

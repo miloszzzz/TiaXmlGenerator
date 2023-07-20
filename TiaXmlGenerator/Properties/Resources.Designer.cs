@@ -205,5 +205,105 @@ namespace TiaXmlGenerator.Properties {
                 return ResourceManager.GetString("FC_ActuatorsSafety", resourceCulture);
             }
         }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu       &lt;MultilingualText ID=&quot;{id}&quot; CompositionName=&quot;Comment&quot;&gt;
+        ///        &lt;ObjectList&gt;
+        ///{multilingual}
+        ///        &lt;/ObjectList&gt;
+        ///      &lt;/MultilingualText&gt;
+        ///.
+        /// </summary>
+        internal static string Textlist_Comment {
+            get {
+                return ResourceManager.GetString("Textlist_Comment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu           &lt;MultilingualTextItem ID=&quot;{id}&quot; CompositionName=&quot;Items&quot;&gt;
+        ///            &lt;AttributeList&gt;
+        ///              &lt;Culture&gt;{lang}&lt;/Culture&gt;
+        ///              &lt;Text&gt;{text}&lt;/Text&gt;
+        ///            &lt;/AttributeList&gt;
+        ///          &lt;/MultilingualTextItem&gt;
+        ///.
+        /// </summary>
+        internal static string Textlist_CommentMulitlingual {
+            get {
+                return ResourceManager.GetString("Textlist_CommentMulitlingual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu       &lt;Hmi.TextGraphicList.TextListEntry ID=&quot;{id}&quot; CompositionName=&quot;Entries&quot;&gt;
+        ///        &lt;AttributeList&gt;
+        ///          &lt;DefaultEntry&gt;false&lt;/DefaultEntry&gt;
+        ///          &lt;EntryType&gt;Range&lt;/EntryType&gt;
+        ///          &lt;From&gt;{value}&lt;/From&gt;
+        ///          &lt;To&gt;{value}&lt;/To&gt;
+        ///        &lt;/AttributeList&gt;
+        ///        &lt;ObjectList&gt;
+        ///          &lt;MultilingualText ID=&quot;{id}&quot; CompositionName=&quot;Text&quot;&gt;
+        ///            &lt;ObjectList&gt;
+        ///{multilingual}
+        ///            &lt;/ObjectList&gt;
+        ///          &lt;/MultilingualText&gt;
+        ///        &lt;/ObjectList&gt;
+        ///      &lt;/Hmi.TextGraphicList. [obcięto pozostałą część ciągu]&quot;;.
+        /// </summary>
+        internal static string Textlist_Entry {
+            get {
+                return ResourceManager.GetString("Textlist_Entry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu               &lt;MultilingualTextItem ID=&quot;{id}&quot; CompositionName=&quot;Items&quot;&gt;
+        ///                &lt;AttributeList&gt;
+        ///                  &lt;Culture&gt;{lang}&lt;/Culture&gt;
+        ///                  &lt;Text&gt;&lt;body&gt;&lt;p&gt;{text}&lt;/p&gt;&lt;/body&gt;&lt;/Text&gt;
+        ///                &lt;/AttributeList&gt;
+        ///              &lt;/MultilingualTextItem&gt;
+        ///.
+        /// </summary>
+        internal static string Textlist_EntryMultilingual {
+            get {
+                return ResourceManager.GetString("Textlist_EntryMultilingual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu     &lt;/ObjectList&gt;
+        ///  &lt;/Hmi.TextGraphicList.TextList&gt;
+        ///&lt;/Document&gt;.
+        /// </summary>
+        internal static string Textlist_Footer {
+            get {
+                return ResourceManager.GetString("Textlist_Footer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;Document&gt;
+        ///  &lt;Engineering version=&quot;V16&quot; /&gt;
+        ///  &lt;DocumentInfo&gt;
+        ///    &lt;Created&gt;2023-07-20T06:38:19.5835293Z&lt;/Created&gt;
+        ///    &lt;ExportSetting&gt;WithDefaults, WithReadOnly&lt;/ExportSetting&gt;
+        ///    &lt;InstalledProducts&gt;
+        ///      &lt;Product&gt;
+        ///        &lt;DisplayName&gt;Totally Integrated Automation Portal&lt;/DisplayName&gt;
+        ///        &lt;DisplayVersion&gt;V16 Update 6&lt;/DisplayVersion&gt;
+        ///      &lt;/Product&gt;
+        ///      &lt;OptionPackage&gt;
+        ///        &lt;DisplayName&gt;TIA Portal Version Control Interface&lt;/DisplayName&gt;
+        ///        &lt; [obcięto pozostałą część ciągu]&quot;;.
+        /// </summary>
+        internal static string Textlist_Header {
+            get {
+                return ResourceManager.GetString("Textlist_Header", resourceCulture);
+            }
+        }
     }
 }

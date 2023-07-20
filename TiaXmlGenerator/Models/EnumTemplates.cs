@@ -9,12 +9,18 @@ namespace TiaXmlGenerator.Models
     public enum EnumTemplates
     {
         Comment,
-        Header,
-        Footer,
-        Movement,
-        Parameters,
-        Handling,
-        Outputs,
-        Safety
+        ActuatorsHeader,
+        ActuatorsFooter,
+        ActuatorsMovement,
+        ActuatorsParameters,
+        ActuatorsHandling,
+        ActuatorsOutputs,
+        ActuatorsSafety,
+        TextlistHeader,
+        TextlistFooter,
+        TextlistComment,
+        TextlistCommentMulti,
+        TextlistEntry,
+        TextlistEntryMulti
     }
 }

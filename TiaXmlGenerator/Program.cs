@@ -14,10 +14,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        /* Actuators example
         ///////////////////////////////////////
         ///////////////////////////////////////
         // Test actuators
-        
+
         List<Actuator> actuatorList = new List<Actuator>();
         Actuator actuator1 = new Actuator();
         Actuator actuator2 = new Actuator();
@@ -41,20 +42,11 @@ internal class Program
         actuator2.OutputRetract = "Q1.2";
         actuator2.OutputExtend = "Q1.3";
         actuatorList.Add(actuator2);
-        ///////////////////////////////////////
-        ///////////////////////////////////////
 
-<<<<<<< HEAD
-=======
         
-
->>>>>>> 228bc4a71bf5ae96ca8c69f8768300cdf639ee86
-
-        #region actuators example
-        /*
         // File to export
         string xmlFilePath = "FC_GeneratedXml.Xml";
-        string xmlContant = XmlHelper.Header.Contant;
+        string xmlContant = XmlHelper.ActuatorsHeader.Contant;
         string tempConatant = string.Empty;
 
         int id = 12;
@@ -64,7 +56,7 @@ internal class Program
 
         foreach (Actuator act in actuatorList)
         {
-            tempConatant = XmlHelper.Movement.Contant;
+            tempConatant = XmlHelper.ActuatorsMovement.Contant;
 
             tempConatant = XmlHelper.InsertActuator(tempConatant, act, ref id);
 
@@ -73,21 +65,21 @@ internal class Program
 
         // Adding comment subnet
         Comment parametersComment = new Comment("--------------------Parameters--------------------");
-        tempConatant = XmlHelper.Comment.Contant;
+        tempConatant = XmlHelper.SubnetComment.Contant;
         tempConatant = XmlHelper.InsertComment(tempConatant, parametersComment);
         tempConatant = XmlHelper.InsertIds(tempConatant, ref id);
         xmlContant += tempConatant;
 
 
         // Adding safety network
-        tempConatant = XmlHelper.Safety.Contant;
+        tempConatant = XmlHelper.ActuatorsSafety.Contant;
         tempConatant = XmlHelper.InsertIds(tempConatant, ref id);
         xmlContant += tempConatant;
 
         // Adding parameters networks
         foreach (Actuator act in actuatorList)
         {
-            tempConatant = XmlHelper.Parameters.Contant;
+            tempConatant = XmlHelper.ActuatorsParameters.Contant;
 
             tempConatant = XmlHelper.InsertActuator(tempConatant, act, ref id);
 
@@ -96,7 +88,7 @@ internal class Program
 
 
         // Adding handling network
-        tempConatant = XmlHelper.Handling.Contant;
+        tempConatant = XmlHelper.ActuatorsHandling.Contant;
         tempConatant = XmlHelper.InsertIds(tempConatant, ref id);
         xmlContant += tempConatant;
 
@@ -105,7 +97,7 @@ internal class Program
         foreach (Actuator act in actuatorList)
         {
             // Outputs template
-            tempConatant = XmlHelper.Outputs.Contant;
+            tempConatant = XmlHelper.ActuatorsOutputs.Contant;
 
             tempConatant = XmlHelper.InsertActuator(tempConatant, act, ref id);
 
@@ -114,9 +106,11 @@ internal class Program
 
 
         // Adding footer
-        xmlContant += XmlHelper.Footer.Contant;
+        xmlContant += XmlHelper.ActuatorsFooter.Contant;
 
         File.WriteAllText(xmlFilePath, xmlContant);
         Console.WriteLine(xmlContant);
+        
+        */
     }
 }

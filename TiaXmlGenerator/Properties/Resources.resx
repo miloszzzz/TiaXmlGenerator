@@ -142,4 +142,22 @@
   <data name="FC_ActuatorsSafety" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Models\templates\FC_ActuatorsSafety.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Textlist_Comment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Models\templates\Textlist_Comment.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Textlist_CommentMulitlingual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Models\templates\Textlist_CommentMulitlingual.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Textlist_Entry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Models\templates\Textlist_Entry.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Textlist_EntryMultilingual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Models\templates\Textlist_EntryMultilingual.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Textlist_Footer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Models\templates\Textlist_Footer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Textlist_Header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Models\templates\Textlist_Header.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

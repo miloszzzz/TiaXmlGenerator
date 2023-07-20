@@ -12,14 +12,17 @@ namespace TiaXmlGenerator.Helpers
     public class XmlHelper
     {
 
-        public static Template Header = new Template(EnumTemplates.Header);
-        public static Template Footer = new Template(EnumTemplates.Footer);
-        public static Template Comment = new Template(EnumTemplates.Comment);
-        public static Template Movement = new Template(EnumTemplates.Movement);
-        public static Template Safety = new Template(EnumTemplates.Safety);
-        public static Template Parameters = new Template(EnumTemplates.Parameters);
-        public static Template Handling = new Template(EnumTemplates.Handling);
-        public static Template Outputs = new Template(EnumTemplates.Outputs);
+        public static Template ActuatorsHeader = new Template(EnumTemplates.ActuatorsHeader);
+        public static Template ActuatorsFooter = new Template(EnumTemplates.ActuatorsFooter);
+        public static Template SubnetComment = new Template(EnumTemplates.Comment);
+        public static Template ActuatorsMovement = new Template(EnumTemplates.ActuatorsMovement);
+        public static Template ActuatorsSafety = new Template(EnumTemplates.ActuatorsSafety);
+        public static Template ActuatorsParameters = new Template(EnumTemplates.ActuatorsParameters);
+        public static Template ActuatorsHandling = new Template(EnumTemplates.ActuatorsHandling);
+        public static Template ActuatorsOutputs = new Template(EnumTemplates.ActuatorsOutputs);
+
+
+
 
         public static string InsertIds(string xmlContant, ref int id)
         {
