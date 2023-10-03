@@ -103,12 +103,6 @@
               </MultilingualTextItem>
               <MultilingualTextItem ID="{id}" CompositionName="Items">
                 <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text>Safety</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="{id}" CompositionName="Items">
-                <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>Safety</Text>
                 </AttributeList>
@@ -120,12 +114,6 @@
               <MultilingualTextItem ID="{id}" CompositionName="Items">
                 <AttributeList>
                   <Culture>pl-PL</Culture>
-                  <Text>Safety</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="{id}" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
                   <Text>Safety</Text>
                 </AttributeList>
               </MultilingualTextItem>

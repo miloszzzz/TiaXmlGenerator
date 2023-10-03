@@ -239,9 +239,9 @@ namespace TiaXmlGenerator.Properties {
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu       &lt;Hmi.TextGraphicList.TextListEntry ID=&quot;{id}&quot; CompositionName=&quot;Entries&quot;&gt;
         ///        &lt;AttributeList&gt;
         ///          &lt;DefaultEntry&gt;false&lt;/DefaultEntry&gt;
-        ///          &lt;EntryType&gt;Range&lt;/EntryType&gt;
-        ///          &lt;From&gt;{value}&lt;/From&gt;
-        ///          &lt;To&gt;{value}&lt;/To&gt;
+        ///          &lt;EntryType&gt;SingleValue&lt;/EntryType&gt;
+        ///          &lt;From&gt;{number}&lt;/From&gt;
+        ///          &lt;To&gt;{number}&lt;/To&gt;
         ///        &lt;/AttributeList&gt;
         ///        &lt;ObjectList&gt;
         ///          &lt;MultilingualText ID=&quot;{id}&quot; CompositionName=&quot;Text&quot;&gt;
@@ -250,7 +250,7 @@ namespace TiaXmlGenerator.Properties {
         ///            &lt;/ObjectList&gt;
         ///          &lt;/MultilingualText&gt;
         ///        &lt;/ObjectList&gt;
-        ///      &lt;/Hmi.TextGraphicList. [obcięto pozostałą część ciągu]&quot;;.
+        ///      &lt;/Hmi.TextGrap [obcięto pozostałą część ciągu]&quot;;.
         /// </summary>
         internal static string Textlist_Entry {
             get {

@@ -14,12 +14,6 @@
               </MultilingualTextItem>
               <MultilingualTextItem ID="{id}" CompositionName="Items">
                 <AttributeList>
-                  <Culture>es-MX</Culture>
-                  <Text>{comment}</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="{id}" CompositionName="Items">
-                <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>{comment}</Text>
                 </AttributeList>
@@ -31,12 +25,6 @@
               <MultilingualTextItem ID="{id}" CompositionName="Items">
                 <AttributeList>
                   <Culture>pl-PL</Culture>
-                  <Text>{comment}</Text>
-                </AttributeList>
-              </MultilingualTextItem>
-              <MultilingualTextItem ID="{id}" CompositionName="Items">
-                <AttributeList>
-                  <Culture>es-MX</Culture>
                   <Text>{comment}</Text>
                 </AttributeList>
               </MultilingualTextItem>

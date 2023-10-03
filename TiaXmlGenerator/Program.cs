@@ -6,7 +6,6 @@ using System.IO;
 using System;
 using TiaXmlGenerator.Helpers;
 using TiaXmlGenerator.Models;
-using Siemens.Engineering.SW.Tags;
 using static System.Net.Mime.MediaTypeNames;
 
 
