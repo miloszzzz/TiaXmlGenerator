@@ -14,6 +14,7 @@ namespace TiaXmlGenerator.Models
         public TextlistEntry(int culturesNumber)
         {
             Texts = new List<string>(culturesNumber);
+            for (int i = 0; i < culturesNumber; i++) { Texts.Add(""); }
         }
     }
 }

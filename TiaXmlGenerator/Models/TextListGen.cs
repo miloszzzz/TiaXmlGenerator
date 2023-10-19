@@ -10,14 +10,14 @@ namespace TiaXmlGenerator.Models
     {
         public string Name { get; set; }
         public List<string> Comment { get; set; }
-        public Dictionary<int, TextlistEntry> Entries { get; set; }
+        public List<TextlistEntry> Entries { get; set; }
         public int CulturesNumber { get; set; }
 
         public TextListGen(string name, int culturesNumber) 
         { 
             Name = name;
             Comment = new List<string>(culturesNumber);
-            Entries = new Dictionary<int, TextlistEntry>();
+            Entries = new List<TextlistEntry>();
             CulturesNumber = culturesNumber;
         }
     }
