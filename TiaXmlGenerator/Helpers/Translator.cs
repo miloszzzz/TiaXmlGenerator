@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using DeepL;
 
@@ -17,7 +14,7 @@ namespace TiaXmlGenerator.Helpers
             translator = new Translator(authkey);
         }
 
-
+        
         public async Task<List<string>> Translate(List<string> texts, string sourceLang, string targetLang)
         {
             List<string> result = new List<string>();

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using TiaXmlGenerator.Models;
 
 namespace TiaXmlGenerator.Helpers
@@ -139,6 +136,23 @@ namespace TiaXmlGenerator.Helpers
                 InsertTextlistEntryMulti(cultures, entry.Texts));
             tempContant = InsertIds(tempContant, ref id);
             return tempContant;
+
+            /*return InsertIds(
+                InsertNumber(
+                    tplTextlistEntry.Contant, 
+                    entry.Number).Replace(
+                        "{multilingual}", 
+                        InsertTextlistEntryMulti(cultures, entry.Texts)), 
+                ref id);*/
+        }
+
+
+        public static string AddTextlistEntry(TextlistEntry entry, List<CultureInfo> cultures, ref int id, bool asdf)
+        {
+            return InsertIds(InsertNumber(
+                        AddTextlistEntry(entry, cultures, ref id), 
+                        entry.Number), 
+                        ref id);
         }
 
 
