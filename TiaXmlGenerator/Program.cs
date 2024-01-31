@@ -8,12 +8,12 @@ using TiaXmlGenerator.Helpers;
 using TiaXmlGenerator.Models;
 using static System.Net.Mime.MediaTypeNames;
 
-
+/*
 internal class Program
 {
     private static void Main(string[] args)
     {
-        /* Actuators example
+         Actuators example
         ///////////////////////////////////////
         ///////////////////////////////////////
         // Test actuators
@@ -110,6 +110,6 @@ internal class Program
         File.WriteAllText(xmlFilePath, xmlContant);
         Console.WriteLine(xmlContant);
         
-        */
+        
     }
-}
+}*/

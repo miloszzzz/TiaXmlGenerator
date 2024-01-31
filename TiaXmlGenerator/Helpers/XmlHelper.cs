@@ -6,9 +6,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using TiaXmlGenerator.Models;
 
-namespace TiaXmlGenerator.Helpers
+namespace TiaXmlGenerator
 {
-    public class XmlHelper
+    public static class XmlHelper
     {
 
         public static Template ActuatorsHeader = new Template(EnumTemplates.ActuatorsHeader);
