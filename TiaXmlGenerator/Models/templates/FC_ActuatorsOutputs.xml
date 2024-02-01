@@ -107,13 +107,13 @@
               <MultilingualTextItem ID="{id}" CompositionName="Items">
                 <AttributeList>
                   <Culture>pl-PL</Culture>
-                  <Text>Output {name}</Text>
+                  <Text>Output {description}</Text>
                 </AttributeList>
               </MultilingualTextItem>
               <MultilingualTextItem ID="{id}" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>Output {name}</Text>
+                  <Text>Output {description}</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>

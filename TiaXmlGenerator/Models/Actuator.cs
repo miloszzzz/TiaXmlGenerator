@@ -10,6 +10,7 @@ namespace TiaXmlGenerator.Models
     public class Actuator
     {
         public string Name { get; set; }
+        public string Description { get; set; }
         public int Number { get; set; }
         public EnumStations Station { get; set; }
         public int Constant { get; set; }
@@ -21,6 +22,7 @@ namespace TiaXmlGenerator.Models
         public Actuator() 
         {
             Name = "Unknown";
+            Description = "";
             Number = 0;
             Station = EnumStations.st1;
             Constant = 0;
@@ -30,9 +32,10 @@ namespace TiaXmlGenerator.Models
             OutputExtend = "Unknown";
         }
 
-        public Actuator(string name, int number, EnumStations station, int constant, string inputRetract, string inputExtend, string outputRetract, string outputExtend)
+        public Actuator(string name, string description, int number, EnumStations station, int constant, string inputRetract, string inputExtend, string outputRetract, string outputExtend)
         {
             Name = name;
+            Description = description;
             Number = number;
             Station = station;
             Constant = constant;

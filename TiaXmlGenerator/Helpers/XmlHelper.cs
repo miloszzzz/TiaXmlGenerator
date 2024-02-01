@@ -48,6 +48,12 @@ namespace TiaXmlGenerator
         }
 
 
+        public static string InsertDescription(string xmlContant, string description)
+        {
+            return xmlContant.Replace("{description}", description);
+        }
+
+
         public static string InsertNumber(string  xmlContant, int number) 
         { 
             return xmlContant.Replace("{number}", number.ToString());
@@ -75,6 +81,7 @@ namespace TiaXmlGenerator
         public static string InsertActuator(string xmlContant, Actuator actuator, ref int id)
         {
             xmlContant = InsertName(xmlContant, actuator.Name);
+            xmlContant = InsertDescription(xmlContant, actuator.Description);
             xmlContant = InsertNumber(xmlContant, actuator.Number);
             xmlContant = xmlContant.Replace("{constant}", actuator.Constant.ToString());
             xmlContant = xmlContant.Replace("{station}", actuator.Station.ToString());
