@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml;
 using TiaXmlGenerator.Models;
+using System.Security;
 
 namespace TiaXmlGenerator
 {
@@ -44,13 +46,13 @@ namespace TiaXmlGenerator
 
         public static string InsertName(string xmlContant, string name)
         {
-            return xmlContant.Replace("{name}", name);
+            return xmlContant.Replace("{name}", SecurityElement.Escape(name));
         }
 
 
         public static string InsertDescription(string xmlContant, string description)
         {
-            return xmlContant.Replace("{description}", description);
+            return xmlContant.Replace("{description}", SecurityElement.Escape(description));
         }
 
 
@@ -68,7 +70,7 @@ namespace TiaXmlGenerator
 
         public static string InsertText(string xmlContant, string text)
         {
-            return xmlContant.Replace("{text}", text);
+            return xmlContant.Replace("{text}", SecurityElement.Escape(text));
         }
 
 
@@ -167,7 +169,7 @@ namespace TiaXmlGenerator
         {
             while (xmlContant.Contains("{comment}"))
             {
-                xmlContant = Regex.Replace(xmlContant, @"\{comment\}", match => comment.CommentText);
+                xmlContant = Regex.Replace(xmlContant, @"\{comment\}", match => SecurityElement.Escape(comment.CommentText));
             }
             return xmlContant;
         }
