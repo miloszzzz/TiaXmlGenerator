@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TiaXmlGenerator.Models
+namespace TiaXmlGenerator.Enums
 {
     public enum EnumTemplates
     {

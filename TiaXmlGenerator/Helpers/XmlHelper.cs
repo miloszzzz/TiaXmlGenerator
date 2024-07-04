@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using TiaXmlGenerator.Models;
 using System.Security;
+using TiaXmlGenerator.Enums;
 
 namespace TiaXmlGenerator
 {
